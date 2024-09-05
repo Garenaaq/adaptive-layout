@@ -41,7 +41,7 @@ closeButton.addEventListener("click", function () {
     submitBtn.disabled = true;
 });
 
-window.addEventListener("mousedown", function (event) {
+window.addEventListener("click", function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
         inputName.value = "";

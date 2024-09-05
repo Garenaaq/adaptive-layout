@@ -193,6 +193,10 @@
                 &:hover {
                     transform: scale(1.5)
                 }
+
+                &:active path {
+                    fill: white;
+                }
             }
 
             &_mini {
