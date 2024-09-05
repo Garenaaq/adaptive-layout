@@ -12,14 +12,18 @@
                     <h1 class="modal__title">Оставьте заявку</h1>
                     <span class="modal__close-button" id="closeButton"></span>
                 </div>
-                <form class="modal__form" action="post">
+                <form
+                    class="modal__form"
+                    method="POST"
+                    action="http://localhost:3000/form.php"
+                >
                     <input
                         class="modal__form-input"
                         type="text"
                         placeholder="Ваше имя *"
                         value=""
                         id="inputName"
-                        required
+                        name="name"
                     />
                     <input
                         class="modal__form-input modal__form-input_phone"
@@ -27,15 +31,14 @@
                         name="phone"
                         id="inputPhone"
                         placeholder="Номер телефона*"
-                        required
                     />
-
                     <div class="modal__block-checkbox">
                         <div>
                             <input
                                 class="modal__form-checkbox"
                                 type="checkbox"
                                 id="checkbox"
+                                name="agreement"
                             />
                             <label class="modal__form-checkbox-label"
                                 >Я соглашаюсь на обработку персональных

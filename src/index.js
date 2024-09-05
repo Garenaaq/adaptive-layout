@@ -35,15 +35,19 @@ openModalButtons.forEach((button) => {
 
 closeButton.addEventListener("click", function () {
     modal.style.display = "none";
-    checkbox.checked = !checkbox.checked;
-    submitBtn.disabled = !checkbox.checked;
+    inputName.value = "";
+    inputPhone.value = "";
+    checkbox.checked = false;
+    submitBtn.disabled = true;
 });
 
 window.addEventListener("mousedown", function (event) {
     if (event.target === modal) {
         modal.style.display = "none";
-        checkbox.checked = !checkbox.checked;
-        submitBtn.disabled = !checkbox.checked;
+        inputName.value = "";
+        inputPhone.value = "";
+        checkbox.checked = false;
+        submitBtn.disabled = true;
     }
 });
 
@@ -137,14 +141,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
 const buttonSubmit = document.getElementById("submitBtn");
 buttonSubmit.addEventListener("click", (event) => {
-    event.preventDefault();
-
     const inputName = document.getElementById("inputName");
     const inputPhone = document.getElementById("inputPhone");
     let hasError = false;
 
     [inputName, inputPhone].forEach((item) => {
         if (!item.value) {
+            event.preventDefault();
             item.style.borderColor = "rgba(248, 116, 116, 1)";
             hasError = true;
         } else {
@@ -153,13 +156,13 @@ buttonSubmit.addEventListener("click", (event) => {
     });
 
     if (!hasError) {
-        inputName.value = "";
-        inputPhone.value = "";
-        checkbox.checked = !checkbox.checked;
-        submitBtn.disabled = !checkbox.checked;
-        modal.style.display = "none";
-
         setTimeout(() => {
+            inputName.value = "";
+            inputPhone.value = "";
+            checkbox.checked = false;
+            submitBtn.disabled = true;
+            modal.style.display = "none";
+            console.log("Форма отправилась");
             alert("Вы успешно отправили заявку!");
         }, 100);
     }
