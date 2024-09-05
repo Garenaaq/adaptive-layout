@@ -1,0 +1,45 @@
+.header {
+    .container {
+        padding-top: 20px;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &__menu-list {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin-left: 50px;
+
+        @media (max-width: 740px) {
+            margin-left: 30px;
+        }
+    }
+
+    &__menu-item {
+        a {
+            font-size: 20px;
+            line-height: 130%;
+            font-weight: 300;
+    
+            @media (max-width: 740px) {
+                font-size: 18px;
+            }
+        }
+        
+        a:hover {
+            border-bottom: 2px solid $main-color;
+        }
+    }
+}

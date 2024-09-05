@@ -1,0 +1,29 @@
+{
+  "name": "test-rocket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build-serv": "webpack",
+    "build-prod": "webpack --node-env=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "postcss": "^8.4.44",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

@@ -1,0 +1,70 @@
+.video {
+    .container {
+        position: relative;
+        height: 517px;
+
+        @media (max-width: 1105px) {
+            height: 401px;
+        }
+
+        @media (max-width: 740px) {
+            height: 236px;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        height: 517px;
+
+        @media (max-width: 1105px) {
+            height: 401px;
+        }
+
+        @media (max-width: 740px) {
+            height: 236px;
+        }
+    }
+
+    &__button {
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        display: flex; 
+        justify-content: center;
+        transform: skewX(165deg);
+        padding: 8px 28px;
+        max-width: 193px;
+        max-height: 33px;
+        border-radius: 0;
+
+        &-text {
+            transform: skewX(-165deg);
+            color: white;
+            font-weight: 500;
+            font-style: italic;
+            font-size: 14px;
+            line-height: 16.8px;
+            margin-right: 8px;
+        }
+
+        &-icon {
+            transform: skewX(-165deg);
+        }
+    }
+
+    &__iframe {
+        display: none; /* Скрываем iframe по умолчанию */
+        width: 100%;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        height: 517px;
+        margin-top: 64px;
+        @media (max-width: 1105px) {
+            height: 401px
+        }
+
+        @media (max-width: 740px) {
+            height: 236px;
+        }
+    }
+}

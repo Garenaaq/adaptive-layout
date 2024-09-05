@@ -1,0 +1,55 @@
+@import './base/fonts';
+@import './base/vars';
+@import './blocks/header';
+@import './blocks/main-video';
+@import './blocks/products';
+@import './blocks/modal';
+@import './blocks/about-us';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: $main-color;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 12px;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(24, 220, 96, 1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @media (max-width: 1105px) {
+        max-width: 784px;
+    }
+
+    @media (max-width: 740px) {
+        max-width: 328px;
+    }
+}
+
+.main {
+    margin-left: 3px;
+    margin-right: 3px;
+}
