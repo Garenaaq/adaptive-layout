@@ -184,19 +184,24 @@
                 cursor: pointer;
                 width: 17px;
                 height: 15px;
-                transition: transform 0.2s ease-in-out;
-
-                &:hover path {
-                    fill: red;
+                
+                @media (hover: hover) {
+                    transition: transform 0.2s ease-in-out;
+                    &:hover path {
+                        fill: red;
+                    }
+    
+                    &:hover {
+                        transform: scale(1.5)
+                    }
                 }
 
-                &:hover {
-                    transform: scale(1.5)
+                @media (hover: none) {
+                    &:active path {
+                        fill: red;
+                    }
                 }
 
-                &:active path {
-                    fill: white;
-                }
             }
 
             &_mini {

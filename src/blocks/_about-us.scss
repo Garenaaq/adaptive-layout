@@ -10,14 +10,4 @@
         margin-bottom: 30px;
     }
 
-    &__text {
-        @media (max-width: 740px) {
-            height: 300px;
-            overflow: scroll;
-            border: 1px solid rgba(209, 209, 209, 1);
-            border-radius: 5px;
-            padding: 5px 5px;
-            scrollbar-color: $main-color $main-color;
-        }
-    }
 }
